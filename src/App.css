@@ -1,0 +1,5 @@
+.MuiFormLabel-asterisk {
+  color: red;
+}
+.grabbing {cursor: -webkit-grabbing; cursor: grabbing;}
+.pointer {cursor: pointer;}
