@@ -73,15 +73,6 @@ const Tabledata = () => {
        
   };
 
-  const edit_data = async (id) => {
-    await axios
-      .get(`${BASE_API}/${id}`)
-      .then((res) => setForm(res.data))
-      .catch((err) => console.log(err));
-    setEdit(true);
-    
-  };
-
   const handelChange = (e) => {
     var value = e.target.value;
     if (e.target.name == "score") {
@@ -153,6 +144,15 @@ const Tabledata = () => {
           })
           .catch((err) => console.log(err));
       }
+  };
+
+  const edit_data = async (id) => {
+    await axios
+      .get(`${BASE_API}/${id}`)
+      .then((res) => setForm(res.data))
+      .catch((err) => console.log(err));
+    setEdit(true);
+    
   };
 
   const clear_data = async () => {
